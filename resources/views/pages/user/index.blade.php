@@ -37,7 +37,7 @@
         <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="{{ route('home.index') }}">Home</a></li>
-            <li><a href="{{ route('users.index') }}" class="active">User</a></li>
+            <li><a href="{{ route('pages.users.index') }}" class="active">User</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -53,7 +53,7 @@
 
         <div class="d-flex justify-content-between align-items-center mb-4">
           <h3 class="fw-bold text-primary mb-0"><i class="bi bi-people-fill me-2"></i>Daftar Pengguna</h3>
-          <a href="{{ route('users.create') }}" class="btn btn-primary">
+          <a href="{{ route('pages.users.create') }}" class="btn btn-primary">
             <i class="bi bi-person-plus-fill me-1"></i> Tambah User
           </a>
         </div>
@@ -107,10 +107,10 @@
                 <td>{{ $data->email }}</td>
                 <td>{{ $data->created_at->format('d M Y H:i') }}</td>
                 <td class="text-center">
-                  <a href="{{ route('users.edit', $data->id) }}" class="btn btn-sm btn-outline-primary me-1">
+                  <a href="{{ route('pages.user.edit', $data->id) }}" class="btn btn-sm btn-outline-primary me-1">
                     <i class="bi bi-pencil-square"></i> Edit
                   </a>
-                  <form action="{{ route('users.destroy', $data->id) }}" method="POST" class="d-inline">
+                  <form action="{{ route('pages.users.destroy', $data->id) }}" method="POST" class="d-inline">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-sm btn-outline-danger"

@@ -219,13 +219,18 @@
         <nav id="navmenu" class="navmenu">
           <ul>
             <li>
-              <a href="{{ route('home.index') }}">
+              <a href="">
                 <i class="fas fa-home nav-icon"></i>Dashboard
               </a>
             </li>
             <li>
-              <a href="{{ route('users.index') }}">
+              <a href="">
                 <i class="fas fa-users nav-icon"></i>User
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fas fa-users nav-icon"></i>Warga
               </a>
             </li>
             <li>
@@ -456,7 +461,7 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><a href="{{ route('home.index') }}"><i class="fas fa-chevron-right footer-icon"></i>Home</a></li>
+            <li><a href="{{ route('home') }}"><i class="fas fa-chevron-right footer-icon"></i>Home</a></li>
             <li><a href="#about"><i class="fas fa-chevron-right footer-icon"></i>Tentang</a></li>
             <li><a href="#"><i class="fas fa-chevron-right footer-icon"></i>Services</a></li>
             <li><a href="#"><i class="fas fa-chevron-right footer-icon"></i>Terms of service</a></li>
@@ -468,7 +473,7 @@
           <h4>Modul Sistem</h4>
           <ul>
             <li><a href="#"><i class="fas fa-chevron-right footer-icon"></i>Pelaporan Bencana</a></li>
-            <li><a href="{{ route('users.index') }}"><i class="fas fa-chevron-right footer-icon"></i>Manajemen Pengguna</a></li>
+            <li><a href="{{ route('pages.users.index') }}"><i class="fas fa-chevron-right footer-icon"></i>Manajemen Pengguna</a></li>
             <li><a href="#"><i class="fas fa-chevron-right footer-icon"></i>Pemantauan & Analisis</a></li>
           </ul>
         </div>

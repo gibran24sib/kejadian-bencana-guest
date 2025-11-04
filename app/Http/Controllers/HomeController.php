@@ -1,19 +1,19 @@
 <?php
-
 namespace App\Http\Controllers;
 
+use App\Models\Kejadian_Bencana;
 use Illuminate\Http\Request;
-use App\Models\Kejadian_Bencana ;
 
 class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(){
-		$data['dataKejadian'] = Kejadian_Bencana::all();
-		return view('guest.home',$data);
-}
+    public function index()
+    {
+        $data = Kejadian_Bencana::all();
+        return view('kejadian');
+    }
 
     /**
      * Show the form for creating a new resource.

@@ -16,7 +16,7 @@ class UserController extends Controller
     public function index()
     {
         $data['dataUser'] = User::all();
-		return view('user.index',$data);
+		return view('pages.user.index',$data);
     }
 
     /**
@@ -24,7 +24,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('user.create');
+        return view('pages.user.create');
     }
 
     /**
@@ -46,7 +46,7 @@ class UserController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-    return redirect()->route('users.index')->with('success', 'User berhasil ditambahkan!');
+    return redirect()->route('pages.user.index')->with('success', 'User berhasil ditambahkan!');
     }
 
     /**
@@ -63,7 +63,7 @@ class UserController extends Controller
     public function edit(string $id)
     {
         $user = User::findOrFail($id);
-        return view('user.edit')->with('user', $user);
+        return view('pages.user.edit')->with('user', $user);
     }
 
     /**
@@ -88,7 +88,7 @@ class UserController extends Controller
 
     $user->save();
 
-    return redirect()->route('users.index')->with('success', 'User berhasil diperbarui!');
+    return redirect()->route('pages.user.index')->with('success', 'User berhasil diperbarui!');
 }
 
 
